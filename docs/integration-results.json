@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-16T13:18:19.390Z",
+  "scope": "Supabase Auth + PostgREST + RLS, isolated assignment project",
+  "results": [
+    {
+      "name": "A login",
+      "passed": true
+    },
+    {
+      "name": "B login",
+      "passed": true
+    },
+    {
+      "name": "A create own",
+      "passed": true
+    },
+    {
+      "name": "A read own",
+      "passed": true
+    },
+    {
+      "name": "B cannot read A",
+      "passed": true
+    },
+    {
+      "name": "B cannot update A",
+      "passed": true
+    },
+    {
+      "name": "B cannot delete A",
+      "passed": true
+    },
+    {
+      "name": "B cannot create as A",
+      "passed": true
+    },
+    {
+      "name": "A cannot transfer ownership",
+      "passed": true
+    },
+    {
+      "name": "Anonymous denied",
+      "passed": true
+    },
+    {
+      "name": "DB rejects blank title",
+      "passed": true
+    },
+    {
+      "name": "A update own",
+      "passed": true
+    },
+    {
+      "name": "A delete own",
+      "passed": true
+    }
+  ]
+}
