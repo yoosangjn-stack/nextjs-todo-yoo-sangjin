@@ -1,0 +1,2 @@
+import TodoForm from '@/domains/todo/TodoForm';import {requireUser} from '@/domains/todo/data';import Link from 'next/link';
+export default async function Page(){await requireUser();return <><Link href="/">목록</Link><h1>새 할 일</h1><TodoForm/></>;}

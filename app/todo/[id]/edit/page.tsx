@@ -1,0 +1,2 @@
+import Link from 'next/link';import {getTodo} from '@/domains/todo/data';import TodoForm from '@/domains/todo/TodoForm';
+export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;const todo=await getTodo(id);return <><Link href={'/todo/'+id+'/view'}>상세로 돌아가기</Link><h1>할 일 수정</h1><TodoForm todo={todo}/></>;}

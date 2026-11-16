@@ -1,0 +1,14 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import validation from '../.test-build/validation.js';
+const {validateTodo,validId}=validation;
+test('valid create',()=>assert.equal(validateTodo('공부','내용','READY'),null));
+test('valid progress',()=>assert.equal(validateTodo('공부','','PROGRESS'),null));
+test('valid done',()=>assert.equal(validateTodo('공부','','DONE'),null));
+test('blank title rejected',()=>assert.ok(validateTodo('  ','','READY')));
+test('101 char title rejected',()=>assert.ok(validateTodo('a'.repeat(101),'','READY')));
+test('5001 char content rejected',()=>assert.ok(validateTodo('a','b'.repeat(5001),'READY')));
+test('invalid status rejected',()=>assert.ok(validateTodo('a','','ADMIN')));
+test('maximum boundaries accepted',()=>assert.equal(validateTodo('a'.repeat(100),'b'.repeat(5000),'DONE'),null));
+test('valid uuid accepted',()=>assert.equal(validId('123e4567-e89b-12d3-a456-426614174000'),true));
+test('malformed uuid rejected',()=>assert.equal(validId('../other'),false));

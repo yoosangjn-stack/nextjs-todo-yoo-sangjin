@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <><h1>항목을 찾을 수 없습니다.</h1><p>없는 항목이거나 접근 권한이 없습니다.</p><Link href="/">목록으로</Link></>;}

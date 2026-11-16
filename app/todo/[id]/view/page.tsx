@@ -1,0 +1,2 @@
+import Link from 'next/link';import {getTodo} from '@/domains/todo/data';import {labels} from '@/domains/todo/types';import DeleteForm from '@/domains/todo/DeleteForm';
+export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;const todo=await getTodo(id);return <><Link href="/">목록</Link><article><small>{labels[todo.status]}</small><h1>{todo.title}</h1><p className="content">{todo.content}</p><small>작성: {todo.created_at}</small></article><Link className="button" href={'/todo/'+id+'/edit'}>수정</Link><DeleteForm id={id}/></>;}

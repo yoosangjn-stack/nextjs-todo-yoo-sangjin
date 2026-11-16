@@ -1,0 +1,2 @@
+import Link from 'next/link';import AuthForm from '@/domains/auth/AuthForm';
+export default function Page(){return <><h1>로그인</h1><p>내 계정의 할 일만 조회하고 관리합니다.</p><AuthForm/><Link href="/sign_up">회원가입</Link></>;}

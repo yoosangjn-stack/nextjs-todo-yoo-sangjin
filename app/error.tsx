@@ -1,0 +1,1 @@
+'use client';export default function Error({reset}:{error:Error;reset:()=>void}){return <section><h1>요청을 완료하지 못했습니다.</h1><p>Supabase 환경변수·연결·테이블 설정을 확인하세요. 잠시 후 다시 시도할 수 있습니다.</p><button onClick={reset}>다시 시도</button></section>;}
