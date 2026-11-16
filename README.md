@@ -4,8 +4,10 @@ CH2 프론트엔드 응용 과제. 로그인한 사용자가 자신의 할 일�
 
 ## 제출 상태
 - 구현: 인증 화면, 개인 Todo CRUD, 상태 변경, 상세/수정 동적 경로, 로딩·오류·빈 목록 UI.
-- 실제 Supabase Auth·CRUD·RLS 13개 통합 검증과 로컬 화면 흐름 검증을 완료했습니다. Vercel 배포 환경 검증 및 일반 가입 이메일 수신 흐름은 별도로 확인해야 합니다.
-- 저장소 주소와 배포 주소는 업로드·배포 완료 후 이 문서와 LMS에 기입합니다. 현재 제출 완료 상태가 아닙니다.
+- 실제 Supabase Auth·CRUD·RLS 13개 통합 검증과 로컬 화면 흐름 검증을 완료했습니다. Vercel 배포 화면에서도 같은 흐름을 재검증했습니다. 일반 가입 이메일 수신 흐름은 별도로 확인해야 합니다.
+- 저장소: https://github.com/yoosangjn-stack/nextjs-todo-yoo-sangjin
+- 서비스: https://nextjs-todo-yoo-sangjin.vercel.app
+- LMS 최종 제출 여부는 별도 확인합니다.
 
 ## 시작
 Node.js 20.9 이상 사용.
