@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsc domains/todo/validation.ts domains/todo/types.ts --outDir .test-build --module commonjs --target ES2020 --skipLibCheck && node --test tests/validation.mjs"
+    "test": "tsc domains/todo/validation.ts domains/todo/types.ts --outDir .test-build --module commonjs --target ES2020 --skipLibCheck && node --test tests/validation.mjs",
+    "test:integration": "node tests/integration.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
