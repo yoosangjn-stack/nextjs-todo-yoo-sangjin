@@ -1,6 +1,7 @@
 'use server';
 import {requireUser} from './data';
 import {revalidatePath} from 'next/cache';
+import {redirect} from 'next/navigation';
 import {validateTodo,validId} from './validation';
 import type {Result} from './types';
 export async function saveTodo(_previous:Result,form:FormData):Promise<Result>{
@@ -25,5 +26,5 @@ export async function deleteTodo(_previous:Result,form:FormData):Promise<Result>
  const {data,error}=await client.from('todos').delete().eq('id',id).eq('user_id',user.id).select('id').single();
  if(error||!data)return {error:'삭제하지 못했습니다. 접근 권한과 연결 상태를 확인하세요.'};
  revalidatePath('/');
- return {success:'삭제했습니다.',redirectTo:'/?deleted=1'};
+ redirect('/?deleted=1');
 }
